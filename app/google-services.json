@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "492548404229",
+    "firebase_url": "https://mini-games-bb59e-default-rtdb.firebaseio.com",
+    "project_id": "mini-games-bb59e",
+    "storage_bucket": "mini-games-bb59e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492548404229:android:ef4c8cc7fa62727408186c",
+        "android_client_info": {
+          "package_name": "com.example.minigames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492548404229-vbksfqor12updh9nhn1m6bpkqeq4hinm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwpvQMTEDo3mM-ZuxWoeIc5IPndfZuLgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492548404229-vbksfqor12updh9nhn1m6bpkqeq4hinm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

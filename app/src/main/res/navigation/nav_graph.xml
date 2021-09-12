@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/caroGameComvsHumanFragment">
+
+    <fragment
+        android:id="@+id/caroGameComvsHumanFragment"
+        android:name="com.example.minigames.gameBasic.caroGame.CaroGameComvsHumanFragment"
+        android:label="CaroGameComvsHumanFragment" >
+        <action
+            android:id="@+id/action_caroGameComvsHumanFragment_to_caroGameDualFragment"
+            app:destination="@id/caroGameDualFragment"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit"
+            app:popEnterAnim="@anim/slide_left_enter"
+            app:popExitAnim="@anim/slide_right_exit"
+            app:popUpTo="@id/caroGameDualFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/caroGameDualFragment"
+        android:name="com.example.minigames.gameBasic.caroGame.CaroGameDualFragment"
+        android:label="CaroGameDualFragment" >
+        <action
+            android:id="@+id/action_caroGameDualFragment_to_caroGameComvsHumanFragment"
+            app:destination="@id/caroGameComvsHumanFragment"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit"
+            app:popEnterAnim="@anim/slide_left_enter"
+            app:popExitAnim="@anim/slide_right_exit"
+            app:popUpTo="@id/caroGameComvsHumanFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

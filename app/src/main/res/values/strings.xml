@@ -1,0 +1,153 @@
+<resources>
+
+    <string name="todo">TODO</string>
+    <string name="app_name">MiniGames</string>
+    <string name="actionbar_game_name">Mini Games</string>
+
+    <!-- Login Activity -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_login">Login</string>
+    <string name="login_create_account">Sign Up</string>
+    <string name="login_reset_pass">Forgot password?</string>
+    <string name="title_activity_login">Login...</string>
+
+    <string name="reset_pass_title">Reset Password</string>
+    <string name="reset_pass_confirm">A reset link was sent to your email, please check to reset the pass!</string>
+
+    <!-- Register Activity -->
+    <string name="action_register">Register</string>
+    <string name="action_login_short">already have an account?</string>
+    <string name="have_already_an_account"> already have an account?</string>
+    <string name="login_create_account_loading">Register...</string>
+
+    <!-- Exception -->
+    <string name="confirm_title">Confirm</string>
+    <string name="invalid_mail">Please input your email</string>
+    <string name="invalid_password">Please input your password</string>
+    <string name="invalid_name">Please input your name</string>
+    <string name="login_message_incorrect_pass_or_mail">Invalid Email or Password</string>
+    <string name="message_network_error">Network error has occurred</string>
+    <string name="verify_email">An email was sent to you to verify, please check and click on the link</string>
+    <string name="message_user_not_exist">The user %s does not exist</string>
+
+    <!-- For Navigation Menu (Left) -->
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Player Game</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+
+    <string name="game1_name">Caro Game</string>
+    <string name="game2_name">Memory Game</string>
+    <string name="game3_name">Sudoku Game</string>
+    <string name="game4_name">Shooting Game</string>
+    <string name="game5_name">Helicopter Game</string>
+    <string name="shop_name">Shop</string>
+
+    <string name="menu_top_players">Top players</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_logout">Logout</string>
+
+    <!-- For Function Menu (Right) -->
+    <string name="menu_information">Information</string>
+    <string name="instructions">Instructions</string>
+
+    <!-- Caro Game -->
+    <string name="title_activity_caro_game">Caro Game</string>
+    <string name="caro_game_com_vs_human_fragment_label">Computer Vs Human</string>
+    <string name="caro_game_dual_fragment_label">Human vs Human</string>
+    <!-- Right Menu -->
+    <string name="menu_caro_game_dual_play">Dual play</string>
+    <string name="menu_caro_game_play_with_computer">Play with computer</string>
+    <string name="instruction_caro1">1. Once a player places a symbol on the board, the symbol cannot be moved or changed.</string>
+    <string name="instruction_caro2">2. The player that manages to create five in a row first wins the round.</string>
+    <string name="instruction_caro3">3. The row can be horizontal, vertical, or diagonal as long as it is unbroken.</string>
+
+    <!-- shop -->
+    <string name="title_activity_shop">Shop</string>
+
+    <!-- Memory Game -->
+    <string name="title_activity_memory_game">Memory Game</string>
+    <string name="memory_game_new_game">New game</string>
+    <!-- Right Menu -->
+    <string name="instructions_game_memory">
+        1. Choose Two cards to flip over, if the images are the same you get a point, if not the images flip back over.\n
+        2. You must correctly choose the correct images within a certain amount of turns.
+    </string>
+
+    <!-- Sudoku Game -->
+    <string name="sudoku_game_title">Sudoku game</string>
+    <string name="sudoku_game_new_game">Start New Game</string>
+    <string name="add_new_board">Add new board</string>
+    <string name="sudoku_game_difficulty_easy">Easy</string>
+    <string name="sudoku_game_difficulty_normal">Normal</string>
+    <string name="sudoku_game_difficulty_hard">Hard</string>
+    <string name="continue_new_save_board">Save</string>
+    <string name="successful_new_board">New board saved</string>
+    <string name="sudoku_game_tart_game">Start Game</string>
+    <string name="sudoku_game_check_board">Check board</string>
+    <string name="board_correct">Board is correct</string>
+    <string name="board_incorrect">Board is not correct</string>
+    <string name="start_piece_error">Can not change start piece</string>
+    <string name="choose_a_number">Choose number to place:</string>
+    <string name="choose_number">Choose number</string>
+    <string name="piece_unsure">Mark piece as unsure</string>
+    <string name="remove_piece">Remove piece</string>
+    <!-- Right Menu -->
+    <string name="instructions_1">1. In Sudoku it is intended to place all the remaining pieces on the board. The numbers range from 1 to 9 (in 9x9 Sudoku).</string>
+    <string name="instructions_2">2. The board is separated into several squares, and inside each of them it is only allowed to place one of each number.</string>
+    <string name="instructions_3">3. It is only allowed to place one of each number at each row, both horizontal and vertical.</string>
+
+    <!-- Shooting Game -->
+    <string name="shooting_game_title">Shooting game</string>
+    <string name="shooting_game_score">Score: %d</string>
+    <string name="shooting_game_remain">Lives: %d</string>
+    <!-- Right Menu -->
+    <string name="instruction_shooting1">1. You have 10 chances to destroy the moving object.</string>
+    <string name="instruction_shooting2">2. Click two button on the side to move, and click center button to fire.</string>
+
+    <!-- Helicopter Game -->
+    <string name="title_activity_helicopter_game">Helicopter Game</string>
+    <!-- Right Menu -->
+    <string name="instruction_helicopter">PRESS TO START</string>
+    <string name="instruction_helicopter_content1">Press and hold to go up</string>
+    <string name="instruction_helicopter_content2">Release to go down</string>
+
+    <!-- Top Player -->
+    <string name="title_activity_top_player">Top Players</string>
+    <string name="tab_text_1">Caro Game</string>
+    <string name="tab_text_2">Memory Game</string>
+    <string name="tab_text_3">Sudoku Game</string>
+    <string name="tab_text_4">Shooting Game</string>
+    <string name="tab_text_5">Helicopter Game</string>
+    <string name="top_score">%d seconds</string>
+    <string name="top_score_point">%d points</string>
+    <string name="top_score_meter">%d meters</string>
+
+    <!-- Setting -->
+    <string name="setting_name">Name</string>
+    <string name="setting_set_new_pass">Change Password</string>
+    <string name="setting_set_new_value">New Password</string>
+    <string name="setting_set_new_done">Done</string>
+    <string name="setting_upate_success">User profile updated</string>
+    <string name="setting_best_score">User best score</string>
+    <string name="setting_best_score_game1">Caro Game: %s seconds</string>
+    <string name="setting_best_score_game2">Memory Game: %s seconds</string>
+    <string name="setting_best_score_game3">Sudoku Game: %s seconds</string>
+    <string name="setting_best_score_game4">Shooting Game: %s points</string>
+    <string name="setting_best_score_game5">Helicopter Game: %s meters</string>
+    <string name="setting_best_score_game6">Coins: %s</string>
+    <!-- Right Menu -->
+    <string name="menu_setting_edit">Edit</string>
+    <string name="menu_setting_save">Save</string>
+
+    <!-- Alert -->
+    <string name="alert_win">You win!\nYou finished this game in %d seconds.</string>
+    <string name="alert_game_4_out">Your current point is %d.\nDo you want continue?</string>
+    <string name="alert_game_4_game_over">Game over. Your point is %d.</string>
+    <string name="title_activity_trophy">Trophy Room</string>
+    <string name="achievText">Achievements</string>
+
+</resources>

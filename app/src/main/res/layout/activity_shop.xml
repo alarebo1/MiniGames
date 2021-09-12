@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="com.example.minigames.gameBasic.shop.ShopActivity" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/layout_action_bar"
+                android:layout_width="423dp"
+                android:layout_height="21dp"
+                android:theme="@style/Theme.MiniGames.AppBarOverlay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/Theme.MiniGames.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_action_bar"
+                app:layout_constraintVertical_bias="1.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shopback"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="425dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_item2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Coins:"
+                            android:textColor="#EC0E0E"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/currencyVar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#EC0E0E"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item1"
+                        android:layout_width="127dp"
+                        android:layout_height="153dp"
+                        android:gravity="center_horizontal"
+                        android:minWidth="@dimen/btn_width"
+                        android:onClick="@{()->onClick.onClickItem1()}"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_item3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_item2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.1"
+                        app:layout_constraintVertical_chainStyle="packed">
+
+                        <ImageButton
+                            android:id="@+id/itembtn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTintMode="multiply"
+                            android:scaleType="centerCrop"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/item1select" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/game1_name"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item2"
+                        android:layout_width="127dp"
+                        android:layout_height="153dp"
+                        android:gravity="center_horizontal"
+                        android:minWidth="@dimen/btn_width"
+                        android:onClick="@{()->onClick.onClickItem2()}"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/btn_item1"
+                        app:layout_constraintLeft_toRightOf="@+id/btn_item1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/btn_item1">
+
+                        <ImageButton
+                            android:id="@+id/itembtn2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/item2select" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/game2_name"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item3"
+                        android:layout_width="127dp"
+                        android:layout_height="153dp"
+                        android:layout_marginTop="@dimen/margin_20_dp"
+                        android:gravity="center_horizontal"
+                        android:minWidth="@dimen/btn_width"
+                        android:onClick="@{()->onClick.onClickItem3()}"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/btn_item4"
+                        app:layout_constraintTop_toBottomOf="@id/btn_item1">
+
+                        <ImageButton
+                            android:id="@+id/itembtn3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/item3select" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/game3_name"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item4"
+                        android:layout_width="127dp"
+                        android:layout_height="153dp"
+                        android:gravity="center_horizontal"
+                        android:minWidth="@dimen/btn_width"
+                        android:onClick="@{()->onClick.onClickItem4()}"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/btn_item3"
+                        app:layout_constraintLeft_toRightOf="@id/btn_item3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/btn_item3">
+
+                        <ImageButton
+                            android:id="@+id/itembtn4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/item4select" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/game4_name"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item5"
+                        android:layout_width="127dp"
+                        android:layout_height="153dp"
+                        android:layout_marginTop="@dimen/margin_20_dp"
+                        android:gravity="center_horizontal"
+                        android:minWidth="@dimen/btn_width"
+                        android:onClick="@{()->onClick.onClickItem5()}"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="@id/btn_item3"
+                        app:layout_constraintRight_toRightOf="@+id/btn_item3"
+                        app:layout_constraintTop_toBottomOf="@id/btn_item3">
+
+                        <ImageButton
+                            android:id="@+id/itembtn5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:background="#00FFFFFF"
+                            android:src="@drawable/item5select" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/game5_name"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item6"
+                        android:layout_width="127dp"
+                        android:layout_height="153dp"
+                        android:layout_marginTop="20dp"
+                        android:onClick="@{()->onClick.onClickFox()}"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_item4"
+                        app:layout_constraintStart_toStartOf="@+id/btn_item4"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_item4">
+
+                        <ImageButton
+                            android:id="@+id/charItem1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#00FFFFFF"
+                            android:clickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/foxselect" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_1shop"
+                        android:layout_width="130dp"
+                        android:layout_height="156dp"
+                        android:layout_marginTop="20dp"
+                        android:onClick="@{()->onClick.onClickSkeleton()}"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_item5"
+                        app:layout_constraintStart_toStartOf="@+id/btn_item5"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_item5">
+
+                        <ImageButton
+                            android:id="@+id/charItem2"
+                            android:layout_width="match_parent"
+                            android:layout_height="153dp"
+                            android:background="#00FFFFFF"
+                            android:clickable="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/skeltonselect" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/activity_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

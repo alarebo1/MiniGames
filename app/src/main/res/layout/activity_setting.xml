@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="com.example.minigames.setting.SettingActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_20_dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_image_user"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:innerRadius="0dp"
+                android:shape="ring"
+                app:cardCornerRadius="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1">
+
+                <ImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:onClick="@{()->onClick.editImageProfile()}"
+                    android:src="@drawable/img_default_account" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/img_edit1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:elevation="10dp"
+                android:onClick="@{()->onClick.editImageProfile()}"
+                android:src="@drawable/icon_edit"
+                android:visibility="invisible"
+                app:layout_constraintCircle="@id/view_image_user"
+                app:layout_constraintCircleAngle="45"
+                app:layout_constraintCircleRadius="80dp"
+                tools:ignore="MissingConstraints"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_image_user"
+                tools:text="user@gmail.com" />
+
+            <TextView
+                android:id="@+id/txt_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12_dp"
+                android:text="@string/setting_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_mail" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->onClick.editName()}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_title"
+                tools:text="@string/setting_name" />
+
+            <ImageView
+                android:id="@+id/img_edit2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:onClick="@{()->onClick.editName()}"
+                android:src="@drawable/icon_edit"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_name_title"
+                app:layout_constraintLeft_toRightOf="@+id/txt_name_title"
+                app:layout_constraintTop_toTopOf="@+id/txt_name_title"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_edit_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20_dp"
+                android:onClick="@{()->onClick.setNewPass()}"
+                android:text="@string/setting_set_new_pass"
+                android:textColor="@color/teal_400"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name"
+                tools:visibility="visible" />
+
+            <include
+                android:id="@+id/layout_score"
+                layout="@layout/include_best_user_score"
+                android:layout_width="214dp"
+                android:layout_height="182dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_edit_pass" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_sudoku"
+    app:startDestination="@id/sudokuMenuFragment">
+
+    <fragment
+        android:id="@+id/sudokuMenuFragment"
+        android:name="com.example.minigames.gameBasic.sudoku.SudokuMenuFragment"
+        android:label="SudokuMenuFragment">
+        <action
+            android:id="@+id/action_sudokuMenuFragment_to_sudokuGameDifficultyFragment"
+            app:destination="@id/sudokuGameDifficultyFragment"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit"
+            app:popEnterAnim="@anim/slide_left_enter"
+            app:popExitAnim="@anim/slide_right_exit"
+            app:popUpTo="@id/caroGameDualFragment" />
+        <action
+            android:id="@+id/action_sudokuMenuFragment_to_sudokuNewGameFragment"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit"
+            app:popEnterAnim="@anim/slide_left_enter"
+            app:popExitAnim="@anim/slide_right_exit"
+            app:destination="@id/sudokuNewGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sudokuGameDifficultyFragment"
+        android:name="com.example.minigames.gameBasic.sudoku.SudokuGameDifficultyFragment"
+        android:label="SudokuGameDifficultyFragment">
+        <action
+            android:id="@+id/action_sudokuGameDifficultyFragment_to_sudokuGamePlayFragment"
+            app:destination="@id/sudokuGamePlayFragment"
+            app:enterAnim="@anim/slide_right_enter"
+            app:exitAnim="@anim/slide_left_exit"
+            app:popEnterAnim="@anim/slide_left_enter"
+            app:popExitAnim="@anim/slide_right_exit"
+            app:popUpTo="@id/caroGameDualFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sudokuGamePlayFragment"
+        android:name="com.example.minigames.gameBasic.sudoku.SudokuGamePlayFragment"
+        android:label="SudokuGamePlayFragment" />
+    <fragment
+        android:id="@+id/sudokuNewGameFragment"
+        android:name="com.example.minigames.gameBasic.sudoku.SudokuNewGameFragment"
+        android:label="SudokuNewGameFragment" />
+
+</navigation>

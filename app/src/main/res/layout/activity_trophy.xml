@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="com.example.minigames.MainActivity" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/layout_action_bar"
+                android:layout_width="423dp"
+                android:layout_height="11dp"
+                android:theme="@style/Theme.MiniGames.AppBarOverlay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/Theme.MiniGames.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_action_bar"
+                app:layout_constraintVertical_bias="1.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shopback"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="425dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_item2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Coins:"
+                            android:textColor="#EC0E0E"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/currencyVar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#EC0E0E"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item1"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:gravity="center_horizontal"
+
+                        android:minWidth="@dimen/btn_width"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_item3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_item2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.1"
+                        app:layout_constraintVertical_chainStyle="packed">
+
+                        <ImageView
+                            android:id="@+id/trophy1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item2"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:gravity="center_horizontal"
+
+                        android:minWidth="@dimen/btn_width"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/btn_item1"
+                        app:layout_constraintLeft_toRightOf="@+id/btn_item1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/btn_item1">
+
+                        <ImageView
+                            android:id="@+id/trophy2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item3"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="@dimen/margin_20_dp"
+                        android:gravity="center_horizontal"
+
+                        android:minWidth="@dimen/btn_width"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/btn_item4"
+                        app:layout_constraintTop_toBottomOf="@id/btn_item1">
+
+                        <ImageView
+                            android:id="@+id/trophy3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item4"
+                        android:layout_width="120dp"
+                        android:layout_height="106dp"
+                        android:gravity="center_horizontal"
+
+                        android:minWidth="@dimen/btn_width"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/btn_item3"
+                        app:layout_constraintLeft_toRightOf="@id/btn_item3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/btn_item3">
+
+                        <ImageView
+                            android:id="@+id/trophy4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item5"
+                        android:layout_width="116dp"
+                        android:layout_height="87dp"
+                        android:layout_marginTop="@dimen/margin_20_dp"
+                        android:gravity="center_horizontal"
+
+                        android:minWidth="@dimen/btn_width"
+                        android:orientation="vertical"
+                        app:layout_constraintHorizontal_bias="0.192"
+                        app:layout_constraintLeft_toLeftOf="@id/btn_item3"
+                        app:layout_constraintRight_toRightOf="@+id/btn_item3"
+                        app:layout_constraintTop_toBottomOf="@id/btn_item3">
+
+                        <ImageView
+                            android:id="@+id/trophy5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_item6"
+                        android:layout_width="155dp"
+                        android:layout_height="197dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="124dp"
+                        android:layout_marginEnd="34dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_item4">
+
+                        <ImageView
+                            android:id="@+id/char2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="186dp"
+                        android:layout_height="199dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginBottom="248dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_item5"
+                        app:layout_constraintVertical_bias="0.254">
+
+                        <ImageView
+                            android:id="@+id/charImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/activity_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

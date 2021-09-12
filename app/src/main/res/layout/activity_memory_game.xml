@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="action"
+            type="com.example.minigames.gameBasic.memoryGame.MemoryGameActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".gameBasic.memoryGame.MemoryGameActivity">
+
+        <Button
+            android:id="@+id/shuffle_button"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/memory_game_new_game"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/margin_20_dp"
+            android:onClick="@{()->action.shuffleGame()}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <GridView
+            android:id="@+id/game_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:columnWidth="120dp"
+            android:numColumns="4"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_20_dp"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            app:layout_constraintTop_toBottomOf="@+id/shuffle_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+        </GridView>
+
+        <TextView
+            android:id="@+id/info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

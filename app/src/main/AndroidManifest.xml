@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.minigames">
+
+    <application
+        android:name="com.example.minigames.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MiniGames">
+
+        <activity android:name="com.example.minigames.gameBasic.topPlayer.TopPlayerActivity" />
+        <activity android:name="com.example.minigames.setting.SettingActivity" />
+        <activity
+            android:name="com.example.minigames.SplashScreenActivity"
+            android:theme="@style/Theme.MiniGames.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.example.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.minigames.MainActivity"
+            android:theme="@style/Theme.MiniGames.NoActionBar" />
+        <activity android:name="com.example.minigames.login.LoginActivity" />
+        <activity android:name="com.example.minigames.gameBasic.caroGame.CaroGameActivity" />
+        <activity android:name="com.example.minigames.gameBasic.memoryGame.MemoryGameActivity" />
+        <activity android:name="com.example.minigames.gameBasic.sudoku.SudokuGameActivity" />
+        <activity android:name="com.example.minigames.gameBasic.shootingGame.ShootingActivity" />
+        <activity android:name="com.example.minigames.gameBasic.shop.ShopActivity" />
+        <activity android:name="com.example.minigames.gameBasic.Achievement.TrophyActivity" />
+        <activity
+            android:name="com.example.minigames.gameBasic.helicopterGame.HelicopterGameActivity"
+            android:screenOrientation="landscape" />
+
+        <service
+            android:name="com.example.minigames.service.BackgroundSoundService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

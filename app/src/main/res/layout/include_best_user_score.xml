@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_best_score"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_game1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_game5_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_mail"
+            tools:text="@string/setting_best_score_game1" />
+
+        <TextView
+            android:id="@+id/txt_game2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_game5_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_game1_title"
+            tools:text="@string/setting_best_score_game2" />
+
+        <TextView
+            android:id="@+id/txt_game3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_game5_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_game2_title"
+            tools:text="@string/setting_best_score_game3" />
+
+        <TextView
+            android:id="@+id/txt_game4_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_game5_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_game3_title"
+            tools:text="@string/setting_best_score_game4" />
+
+        <TextView
+            android:id="@+id/txt_game5_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_game4_title"
+            tools:text="@string/setting_best_score_game5" />
+
+        <TextView
+            android:id="@+id/txt_game6_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_game5_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_game5_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_game5_title"
+            tools:text="@string/setting_best_score_game6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
